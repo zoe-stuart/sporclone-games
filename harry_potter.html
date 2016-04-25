@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<!--
+In this file, comments are used to identify different parts of the code by letter.
+The Sporclone Instructions file will refer to letters when describing the sequence of
+steps necessary to create a working Sporclone game. Complete the project according
+to the order of the NUMBERED instructions, not the order of the letters.
+DO NOT DELETE THE LETTER COMMENTS AFTER YOU COMPLETE STEPS!!!!!
+-->
+
+<html>
+<head>
+<!-- a. -->
+<title>Sporclone: Harry Potter</title>
+
+<!-- b. -->
+<link rel="stylesheet" href="css/main.css">
+
+<!-- You may optionally style the table in your answers section here. -->
+<style>
+table {
+}
+tr {
+}
+th {
+}
+td {
+    text-align: center;
+}
+img.pic {
+    max-width: 200px;
+}
+
+p.trivia{
+    font-weight: bold;
+    text-align: center;
+}
+
+table span {
+    /* applies only to span tags within table */
+    border: 1px solid #AAAAAA;
+    display: inline-block;
+    height: 20px;
+    width: 200px;
+}
+</style>
+
+<script>
+/*********** Game configuration ***********/
+// c.
+var answers = ["Sorcerer's Stone", "Chamber of Secrets", "Prisoner of Azkaban", "Goblet of Fire", "Order of the Phoenix", "Half-Blood Prince", "Deathly Hallows", "J. K. Rowling", "lightning bolt | lightning", "Voldemort", "Ginny Weasley | Ginny", "Lestrange"];
+// d.
+var time_limit = 105; // in seconds
+</script>
+
+</head>
+
+
+<!-- e. -->
+<body onload="setup()">
+
+<header>
+    <h1>Sporclone</h1>
+</header>
+
+<div class="frame">
+
+    <section>
+
+        <aside>
+            <h3>More Games</h3>
+            <ul>
+            <!-- f. -->
+            <li><a href="books.html">Books Quiz</a></li>
+            <li><a href="villains.html">Disney Villains Quiz</a></li>
+            </ul>
+        </aside>
+
+        <!-- g. -->
+        <img class="icon" src="img/hp_icon.jpeg" alt="quiz logo">
+
+        <!-- h. -->
+        <h2>Answer the following Harry Potter Trivia</h2>
+
+    </section>
+
+    <section>
+
+        <div class="column">
+            <!-- i. -->
+            <input id="start" onclick="start()" type="button" value="PLAY GAME">
+        </div>
+
+        <div class="column">
+            <!-- j. -->
+            <h3>Answer:</h3>
+
+            <!-- k.  -->
+            <input id="guess" onkeyup="check()" type="text">
+        </div>
+
+        <div class="column">
+            <h3>Score</h3>
+            <span id="score"></span>
+        </div>
+
+        <div class="column">
+            <h3>Time</h3>
+            <span id="time"></span>
+        </div>
+
+    </section>
+
+    <section>
+
+        <!-- l. -->
+        <table>
+        <tr>
+            <td><p class="trivia">1st Harry Potter book?<br>Harry Potter and the... </p></td>
+            <td><p class="trivia">2nd Harry Potter book?<br>Harry Potter and the... </p></td>
+            <td><p class="trivia">3rd Harry Potter book?<br>Harry Potter and the... </p></td>
+            <td><p class="trivia">4th Harry Potter book?<br>Harry Potter and the... </p></td>
+        </tr>
+        <tr>
+        <td><span id="answer0"></span></td>
+        <td><span id="answer1"></span></td>
+        <td><span id="answer2"></span></td>
+        <td><span id="answer3"></span></td>
+        </tr>
+        <tr>
+            <td><p class="trivia">5th Harry Potter book?<br>Harry Potter and the... </p></td>
+            <td><p class="trivia">6th Harry Potter book?<br>Harry Potter and the... </p></td>
+            <td><p class="trivia">7th Harry Potter book?<br>Harry Potter and the... </p></td>
+            <td><p class="trivia">Author's Name?</p></td>
+        </tr>
+        <tr>
+        <td><span id="answer4"></span></td>
+        <td><span id="answer5"></span></td>
+        <td><span id="answer6"></span></td>
+        <td><span id="answer7"></span></td>
+        </tr>
+        <tr>
+            <td><p class="trivia">Shape of Harry Potter's Scar?</p></td>
+            <td><p class="trivia">Harry's enemy?</p></td>
+            <td><p class="trivia">Ron's only sister?</p></td>
+            <td><p class="trivia">Bellatrix___________?</p></td>
+        </tr>
+        <tr>
+        <td><span id="answer8"></span></td>
+        <td><span id="answer9"></span></td>
+        <td><span id="answer10"></span></td>
+        <td><span id="answer11"></span></td>
+        </tr>
+        <tr>
+        </table>
+
+    </section>
+
+    <footer>
+
+        <!-- m. -->
+        <p>Quiz by Zoe S.</p>
+
+    </footer>
+
+</div>
+
+<!-- n. -->
+<script src="js/sporclone.js"></script>
+
+</body>
+</html>

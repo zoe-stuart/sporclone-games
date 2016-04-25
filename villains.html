@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<!--
+In this file, comments are used to identify different parts of the code by letter.
+The Sporclone Instructions file will refer to letters when describing the sequence of
+steps necessary to create a working Sporclone game. Complete the project according
+to the order of the NUMBERED instructions, not the order of the letters.
+DO NOT DELETE THE LETTER COMMENTS AFTER YOU COMPLETE STEPS!!!!!
+-->
+
+<html>
+<head>
+<!-- a. -->
+<title>Sporclone: Disney Villains</title>
+
+<!-- b. -->
+<link rel="stylesheet" href="css/main.css">
+
+<!-- You may optionally style the table in your answers section here. -->
+<style>
+table {
+}
+tr {
+}
+th {
+}
+td {
+    text-align: center;
+}
+img.pic {
+    max-width: 200px;
+}
+table span {
+    /* applies only to span tags within table */
+    border: 1px solid #AAAAAA;
+    display: inline-block;
+    height: 20px;
+    width: 200px;
+}
+</style>
+
+<script>
+/*********** Game configuration ***********/
+// c.
+var answers = ["Jafar", "Hades", "Mother Gothel", "Ursula", "Queen of Hearts", "Scar", "Yzma", "Rasputin", "Governor Ratcliffe | ratcliffe", "Gaston", "Maleficent", "Shan Yu", "The Evil Queen | evil queen", "Dr. Facilier", "Captain Hook | hook", "The Big Bad Wolf | big bad wolf"];
+// d.
+var time_limit = 105; // in seconds
+</script>
+
+</head>
+
+
+<!-- e. -->
+<body onload="setup()">
+
+<header>
+    <h1>Sporclone</h1>
+</header>
+
+<div class="frame">
+
+    <section>
+
+        <aside>
+            <h3>More Games</h3>
+            <ul>
+            <!-- f. -->
+            <li><a href="harry_potter.html">Harry Potter Trivia</a></li>
+            <li><a href="books.html">Books Quiz</a></li>
+            </ul>
+        </aside>
+
+        <!-- g. -->
+        <img class="icon" src="img/villains_icon.jpg" alt="quiz logo">
+
+        <!-- h. -->
+        <h2>Name these classic disney villains.</h2>
+
+    </section>
+
+    <section>
+
+        <div class="column">
+            <!-- i. -->
+            <input id="start" onclick="start()" type="button" value="PLAY GAME">
+        </div>
+
+        <div class="column">
+            <!-- j. -->
+            <h3>Villain:</h3>
+
+            <!-- k.  -->
+            <input id="guess" onkeyup="check()" type="text">
+        </div>
+
+        <div class="column">
+            <h3>Score</h3>
+            <span id="score"></span>
+        </div>
+
+        <div class="column">
+            <h3>Time</h3>
+            <span id="time"></span>
+        </div>
+
+    </section>
+
+    <section>
+
+        <!-- l. -->
+        <table>
+        <tr>
+            <td><img src="img/jafar.jpg" alt="jafar" class="pic"></td>
+            <td><img src="img/hades.jpg" alt="hades" class="pic"></td>
+            <td><img src="img/mother_gothel.jpg" alt="mother gothel" class="pic"></td>
+            <td><img src="img/ursula.jpg" alt="ursula" class="pic"></td>
+        </tr>
+        <tr>
+        <td><span id="answer0"></span></td>
+        <td><span id="answer1"></span></td>
+        <td><span id="answer2"></span></td>
+        <td><span id="answer3"></span></td>
+        </tr>
+        <tr>
+            <td><img src="img/queen_of_hearts.jpg" alt="queen of hearts" class="pic"></td>
+            <td><img src="img/scar.jpg" alt="scar" class="pic"></td>
+            <td><img src="img/yzma.jpg" alt="yzma" class="pic"></td>
+            <td><img src="img/rasputin.jpg" alt="rasputin" class="pic"></td>
+        </tr>
+        <tr>
+        <td><span id="answer4"></span></td>
+        <td><span id="answer5"></span></td>
+        <td><span id="answer6"></span></td>
+        <td><span id="answer7"></span></td>
+        </tr>
+        <tr>
+            <td><img src="img/governor_ratcliffe.jpg" alt="governor ratcliffe" class="pic"></td>
+            <td><img src="img/gaston.jpg" alt="gaston" class="pic"></td>
+            <td><img src="img/maleficent.jpg" alt="maleficent" class="pic"></td>
+            <td><img src="img/shan_yu.jpg" alt="shan yu" class="pic"></td>
+        </tr>
+        <tr>
+        <td><span id="answer8"></span></td>
+        <td><span id="answer9"></span></td>
+        <td><span id="answer10"></span></td>
+        <td><span id="answer11"></span></td>
+        </tr>
+        <tr>
+            <td><img src="img/evil_queen.jpg" alt="evil queen" class="pic"></td>
+            <td><img src="img/dr_facilier.jpg" alt="dr facilier" class="pic"></td>
+            <td><img src="img/captain_hook.png" alt="captain hook" class="pic"></td>
+            <td><img src="img/big_bad_wolf.png" alt="shan yu" class="pic"></td>
+        </tr>
+        <tr>
+        <td><span id="answer12"></span></td>
+        <td><span id="answer13"></span></td>
+        <td><span id="answer14"></span></td>
+        <td><span id="answer15"></span></td>
+        </tr>
+        </table>
+
+    </section>
+
+    <footer>
+
+        <!-- m. -->
+        <p>Quiz by Zoe S.</p>
+
+    </footer>
+
+</div>
+
+<!-- n. -->
+<script src="js/sporclone.js"></script>
+
+</body>
+</html>

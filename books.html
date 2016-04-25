@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<!--
+In this file, comments are used to identify different parts of the code by letter.
+The Sporclone Instructions file will refer to letters when describing the sequence of
+steps necessary to create a working Sporclone game. Complete the project according
+to the order of the NUMBERED instructions, not the order of the letters.
+DO NOT DELETE THE LETTER COMMENTS AFTER YOU COMPLETE STEPS!!!!!
+-->
+
+<html>
+<head>
+<!-- a. -->
+<title>Sporclone: Book Titles</title>
+
+<!-- b. -->
+<link rel="stylesheet" href="css/main.css">
+
+<!-- You may optionally style the table in your answers section here. -->
+<style>
+table {
+}
+tr {
+}
+th {
+}
+
+td {
+    text-align: center;
+}
+
+img.pic {
+    max-width: 200px;
+}
+
+p.trivia{
+    font-weight: bold;
+    text-align: center;
+}
+
+table span {
+    /* applies only to span tags within table */
+    border: 1px solid #AAAAAA;
+    display: inline-block;
+    height: 40px;
+    width: 200px;
+}
+</style>
+
+<script>
+/*********** Game configuration ***********/
+// c.
+var answers = ["Brisingr | Eragon | Inheritance", "The City of Bones | City of Bones", "The Infernal Devices | Infernal Devices", "Divergent", "The Fault in Our Stars | Fault in Our Stars", "The Hunger Games | Hunger Games", "To Kill a Mockingbird", "Lady Midnight", "The Lord of the Flies | Lord of the Flies", "Maze Runner | The Maze Runner", "The Chronicles of Narnia | Chronicles of Narnia", "The Novice", "The Big Friendly Giant | The BFG", "Matilda", "The Selection", "A Series of Unfortunate Events: The Bad Beginning | A Series of Unfortunate Events | The Bad Beginning", "Wings of Fire", "The Great Gatsby", "Harry Potter & the Order of the Pheonix | Harry Potter | Order of the Pheonix", "Matched"];
+// d.
+var time_limit = 210; // in seconds
+</script>
+
+</head>
+
+
+<!-- e. -->
+<body onload="setup()">
+
+<header>
+    <h1>Sporclone</h1>
+</header>
+
+<div class="frame">
+
+    <section>
+
+        <aside>
+            <h3>More Games</h3>
+            <ul>
+            <!-- f. -->
+            <li><a href="harry_potter.html">Harry Potter Trivia</a></li>
+            <li><a href="villains.html">Disney Villains Quiz</a></li>
+            </ul>
+        </aside>
+
+        <!-- g. -->
+        <img class="icon" src="img/books_icon.jpg" alt="quiz logo">
+
+        <!-- h. -->
+        <h2>Fill in the titles of these books.</h2>
+
+    </section>
+
+    <section>
+
+        <div class="column">
+            <!-- i. -->
+            <input id="start" onclick="start()" type="button" value="PLAY GAME">
+        </div>
+
+        <div class="column">
+            <!-- j. -->
+            <h3>Book Title:</h3>
+
+            <!-- k.  -->
+            <input id="guess" onkeyup="check()" type="text">
+        </div>
+
+        <div class="column">
+            <h3>Score</h3>
+            <span id="score"></span>
+        </div>
+
+        <div class="column">
+            <h3>Time</h3>
+            <span id="time"></span>
+        </div>
+
+    </section>
+
+    <section>
+
+        <!-- l. -->
+        <table>
+        <tr>
+            <td><img clss="pic" src="img/brisingr.jpg" alt="Brisingr"></td>
+            <td><img clss="pic" src="img/city_of_bones.jpg" alt="city of bones"></td>
+            <td><img clss="pic" src="img/clockwork_angel.jpg" alt="clockwork angel"></td>
+            <td><img clss="pic" src="img/divergent.jpg" alt="divergent"></td>
+        </tr>
+        <tr>
+        <td><span id="answer0"></span></td>
+        <td><span id="answer1"></span></td>
+        <td><span id="answer2"></span></td>
+        <td><span id="answer3"></span></td>
+        </tr>
+        <tr>
+            <td><img clss="pic" src="img/fault_in_our_stars.jpg" alt="the fault in our stars"></td>
+            <td><img clss="pic" src="img/hunger_games.jpg" alt="the hunger games"></td>
+            <td><img clss="pic" src="img/kill_a_mockingbird.jpg" alt="how to kill a mockingbird"></td>
+            <td><img clss="pic" src="img/lady_midnight.jpg" alt="lady midnight"></td>
+        </tr>
+        <tr>
+        <td><span id="answer4"></span></td>
+        <td><span id="answer5"></span></td>
+        <td><span id="answer6"></span></td>
+        <td><span id="answer7"></span></td>
+        </tr>
+        <tr>
+            <td><img clss="pic" src="img/lord_of_the_flies.jpg" alt="lord of the flies"></td>
+            <td><img clss="pic" src="img/maze_runner.jpg" alt="maze runner"></td>
+            <td><img clss="pic" src="img/narnia.jpg" alt="cronicles of narnia"></td>
+            <td><img clss="pic" src="img/novice.jpg" alt="novice"></td>
+        </tr>
+        <tr>
+        <td><span id="answer8"></span></td>
+        <td><span id="answer9"></span></td>
+        <td><span id="answer10"></span></td>
+        <td><span id="answer11"></span></td>
+        </tr>
+        <tr>
+            <td><img clss="pic" src="img/the_bfg.jpg" alt="the odyssey"></td>
+            <td><img clss="pic" src="img/matilda.jpg" alt="rangers apprentice"></td>
+            <td><img clss="pic" src="img/selection.jpg" alt="selection"></td>
+            <td><img clss="pic" src="img/unfortunate_events.jpg" alt="a series ofunfortunate events"></td>
+        </tr>
+        <tr>
+        <td><span id="answer12"></span></td>
+        <td><span id="answer13"></span></td>
+        <td><span id="answer14"></span></td>
+        <td><span id="answer15"></span></td>
+        </tr>
+        <tr>
+            <td><img clss="pic" src="img/wings_of_fire.png" alt="wings of fire"></td>
+            <td><img clss="pic" src="img/gatsby.png" alt="The Great Gatsby"></td>
+            <td><img clss="pic" src="img/harry_potter.jpg" alt="harry potter"></td>
+            <td><img clss="pic" src="img/matched.jpg" alt="Matched"></td>
+        </tr>
+        <tr>
+        <td><span id="answer16"></span></td>
+        <td><span id="answer17"></span></td>
+        <td><span id="answer18"></span></td>
+        <td><span id="answer19"></span></td>
+        </tr>
+        </table>
+
+    </section>
+
+    <footer>
+
+        <!-- m. -->
+        <p>Quiz by Zoe S.</p>
+
+    </footer>
+
+</div>
+
+<!-- n. -->
+<script src="js/sporclone.js"></script>
+
+</body>
+</html>
